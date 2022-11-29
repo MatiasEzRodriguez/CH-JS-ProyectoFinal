@@ -78,6 +78,9 @@ formulario.addEventListener('submit', (e) => {
         console.log("antigüedad: ", antiguedad);
         console.log("La cotizacion mensual de la poliza es: ", cotizacion);
 
+        let parrafo=document.getElementById('p1');
+        parrafo.innerHTML=
+        `La costo mensual de la poliza es: ${cotizacion}`;
     }
     if (ncobertura == 2) {
         cobertura = "Contra Todo Riesgo";
@@ -105,6 +108,16 @@ formulario.addEventListener('submit', (e) => {
         console.log("Con franquisia de: ", montoFranquisia[0]);
         console.log("O tambien: ", cotizacion2);
         console.log("Con franquisia de: ", montoFranquisia[1]);
+    
+        let parrafo=document.getElementById('p1');
+        parrafo.innerHTML=
+        `El costo mensual de la poliza es: ${cotizacion} con franquisia de: ${montoFranquisia[0]}`;
+        let parrafo2=document.getElementById('p2');
+        parrafo2.innerHTML=
+        `O tambien: ${cotizacion2} con franquisia de : ${montoFranquisia[1]}`;
+        
+
+    
     }
 })
 
